@@ -25,8 +25,6 @@ class UsersController < ApplicationController
   end
 
   get '/login' do
-    @user = User.find_by(id: session[:user_id])
-    binding.pry
     if logged_in?
       redirect to ('/tweets')
     else
